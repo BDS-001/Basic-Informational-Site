@@ -1,7 +1,8 @@
-const http = require('http')
-const fs = require('fs').promises
+require("dotenv").config();
+const express = require("express");
+const app = express();
 
-const PORT = 8080
+const PORT = parseInt(process.env.USE_PORT, 10) || 3000;
 
 async function readFile(filePath) {
     try {
