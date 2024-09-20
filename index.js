@@ -25,7 +25,7 @@ async function handleRequest(req, res) {
             res.write(errorContent)
             res.end()
         } catch (error) {
-            res.end('404 Not Found');
+            res.end('could not open error page');
         }
     }
 }
